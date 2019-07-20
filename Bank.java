@@ -1,18 +1,29 @@
-package redington.day2.practice;
+package gayu;
 
-public class Bank {
+ class Bank1 {
 	
-	void deposit()
-	{
-		
+	
+		Bank1 (int a)
+		{
+			System.out.println("A");
+		}
 	}
-	void withdraw()
+	class Paytm extends Bank1
 	{
-		
+		Paytm()
+		{
+			super(5);
+			System.out.println("B");
+		}
 	}
-	void openAccount()
-	{
+	
+	public class Bank{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
+		Paytm p = new Paytm();
+          
 	}
 
 }
