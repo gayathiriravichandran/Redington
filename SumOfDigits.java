@@ -1,60 +1,40 @@
-package com.redington.java.array;
+package com.redington.java.testpractice;
 
 import java.util.Scanner;
 
 public class SumOfDigits {
-	int [] rev = new int[5];
-	int [] number = new int[5];
- 	int [] num = new int[5];
-	int [] sum = new int[5];
-	public void getValues()
+	
+	int n ; 
+	
+	int sum = 0 ;
+	 
+	void getInput()
 	{
 		Scanner scan = new Scanner(System.in);
-		for(int i=0;i<=4; i++)
-		{
-			System.out.println("Enter the number :");
-			num[i]=scan.nextInt();
-			number[i]= num[i];
-		}
+		System.out.println("Enter the number :");
+		n = scan.nextInt();
 	}
-	
-	public void sumOfDigits()
+	void findSumofDigits()
 	{
-		for(int i=0;i<=4; i++)
+		int a= n;
+		while(n>0)
 		{
-
-			
-			while(num[i]>0)
-			{
-				 rev[i] = num[i]%10;
-				//System.out.println(n);
-				sum[i] = sum[i]+rev[i];
-				 num[i]=num[i]/10;
-			}
-			
-			System.out.println(sum[i]);
-			
+			int rev = n%10;
+			//System.out.println(n);
+			sum = sum+rev;
+			 n=n/10;
 		}
-		}
-public void divisible()
-	{
-		for(int i=0 ; i<=4 ; i++)
+		
+		System.out.println("sum is :" +sum);
+		
+		
+		if (a%sum ==0)
 		{
-			if (number[i]%sum[i] ==0)
-			{
-			  System.out.println(number[i] + "Divisible by " +sum[i]);	
-			}else
-			{
-				System.out.println(number[i] + "not Divisible by " +sum[i]);
-			}
-			
+			System.out.println("YES");
+		}else
+		{
+			System.out.println("NO");
 		}
 	}
-		
-		
 
-		
-	}
-
-
-
+}

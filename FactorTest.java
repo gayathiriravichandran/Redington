@@ -1,12 +1,13 @@
 package com.redington.java.testpractice;
 
-public class SumOfDigitsTest {
+public class FactorTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		SumOfDigits s1 = new SumOfDigits();
-		s1.getInput();
-		s1.findSumofDigits();
+		
+		Factor f1 = new Factor();
+		f1.getInput();
+		f1.findFactor();
 
 	}
 
