@@ -1,29 +1,15 @@
-package gayu;
+package siva.array;
 
-
-
- class A1 {
-	int i = 10;
+public class A {
+	void get()
+	{
+		get();
 	}
 
-	class B{
-		
-		void display(A1 a)
-		{
-			System.out.println(a.i);
-		}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    A a=new A();
+    a.get();
 	}
-		
-	public class A{	
-		public static void main(String[] args) {
-			// TODO Auto-generated method stub
-			
-			B b = new B();
-			b.display(new A1());
-			
-
-		}
-
-
 
 }
