@@ -1,0 +1,66 @@
+class SecTask{
+
+
+ var names : [String]
+ init(names: [String]) 
+    {
+        self.names = names
+    }
+ func findReplace(_ searchValue : String , _ replaceValue : String) -> String{
+ var currentIndex = 0
+
+ for name in names
+  {
+    if name == searchValue
+     {
+        print("Found \(name) for index \(currentIndex)")
+        break
+     }
+
+    currentIndex += 1
+  }
+
+ names[currentIndex]=replaceValue
+ return "\(searchValue) get replaced as \(names[currentIndex])"
+ }
+
+ func commonElements( _ firstArray : [String] , _ secArray:[String])-> [String]
+ {
+ 
+ let outpt =  firstArray.filter{ secArray.contains($0) }
+ return outpt
+ }
+ 
+ 
+ func startLetter(_ input : [String] , completion:(([String])-> ()))
+ {
+  let output = input.filter{$0.hasPrefix("a")==true}
+     completion(output)
+ }
+
+ 
+ 
+ 
+ }
+
+ extension String{
+    func add( _ val : String)-> String{
+     let  val  = "Mr " + val
+        return val
+    }
+ }
+
+ var a="Jhon"
+ print(a.add(a))
+
+ var st = SecTask(names: ["Ajith", "Kumar", "Gayathiri", "Shalini", "Marvin"])
+ let value=st.findReplace("Marvin", "Melvin")
+ print(value)
+ let firstArray=["a","b","c"]
+ let secArray=["a","b","d"]
+ let output=st.commonElements(firstArray,secArray)
+ print(output)
+ st.startLetter(["ajith","apple","dad"])
+ {(name: [String]) in
+ print(name)
+ }

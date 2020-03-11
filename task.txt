@@ -1,0 +1,75 @@
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner scan= new Scanner(System.in);
+System.out.println("enter the size of an array");
+int no= scan.nextInt();
+String s[] = new String[no];
+System.out.println(" enter the array elements");
+  for(int i=0; i<no;i++){
+  s[i]=scan.nextLine();
+ 
+
+  }
+
+int n=0;
+ArrayList list = new ArrayList();
+ 
+  for(int i=0; i<no;i++){
+    String s1[]=s[i].split(" ");
+String str= s1[0];
+  
+	
+	if(str.equals("get"))
+	{
+	n=1;
+	}
+	else if(str.equals("add"))
+	{
+	n=2;
+	}
+	else if(str.equals("count"))
+	{
+	n=3;
+	}
+	else if(str.equals("reset"))
+	{
+	n=4;
+	}
+
+	if(n==1){
+		boolean check=false;
+		if(list.contains(s1[i]))
+		{
+			check=true;
+		}
+		System.out.println(check);
+
+		if(n==2){
+			 System.out.println(" enter the arraylist elements");
+
+		int num=scan.nextInt();
+		for(int j=0;j<num;j++)
+		{
+		String s2=scan.nextLine();
+			list.add(s2);
+		}
+		
+		System.out.println(true);
+
+	}
+	if(n==3)
+	{
+		System.out.println(list.size());
+	}
+	if(n==4)
+	{
+		System.out.println(list.remove(0));
+	}
+	}
+}
+
+}
+
+	
+}
